@@ -67,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
                 R.id.nav_farecollection ,
                 R.id.nav_faresettings ,
                 R.id.nav_profile  ,
+                R.id.nav_transactionhistory  ,
                 R.id.nav_workinghours)
                 .setOpenableLayout(drawer)
                 .build();
