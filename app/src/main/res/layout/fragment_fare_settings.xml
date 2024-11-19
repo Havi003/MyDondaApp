@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,7 +10,7 @@
     <ImageView
         android:layout_width="100sp"
         android:layout_height="100sp"
-        android:src="@drawable/app_logo"
+        android:src="@drawable/applogo"
         android:layout_gravity="center"
         />
 
@@ -41,54 +42,63 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            app:hintTextColor="@color/black">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/From"
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
+                android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:background="@drawable/whitegradientbackground"
                 android:hint="@string/from_where"
+                android:textColor="@color/black"
+                android:textCursorDrawable="@null"
                 android:textSize="15sp" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            app:hintTextColor="@color/black">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/To"
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
+                android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:background="@drawable/whitegradientbackground"
                 android:hint="@string/to_where"
+                android:textColor="@color/black"
+                android:textCursorDrawable="@null"
                 android:textSize="15sp" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            app:hintTextColor="@color/black">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/enter_rate"
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
+                android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:background="@drawable/whitegradientbackground"
                 android:hint="@string/enter_rate"
                 android:textColor="@android:color/black"
+                android:textCursorDrawable="@null"
                 android:textSize="15sp" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/add_route_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="10dp"
             android:background="@drawable/maroongradientbackground"
             android:text="@string/add_route"
             android:textColor="#FFFFFF"
@@ -112,11 +122,12 @@
             android:background="@drawable/savedroutesbg"
             android:gravity="center"
             android:padding="3dp"
-            android:text="@string/saved_routes"
+            android:text="SAVED ROUTES"
             android:textColor="#FFFFFF"
             android:textSize="10sp" />
 
         <TableLayout
+            android:id="@+id/saved_routes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:stretchColumns="0"
@@ -144,89 +155,11 @@
                     android:padding="8dp"/>
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="88dp"
                     android:layout_height="wrap_content"
-                    android:text="@string/delete"
                     android:padding="8dp"/>
             </TableRow>
 
-            <TableRow
-                android:divider="?android:attr/dividerHorizontal"
-                android:showDividers="middle">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/rongai_to_kiserian"
-                    android:padding="8dp"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="50"
-                    android:padding="8dp"/>
-
-                <androidx.appcompat.widget.AppCompatButton
-                    android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:background="@drawable/maroongradientbackground"
-                    android:text="@string/Delete"
-                    android:textColor="#FFFFFF"
-                    android:textSize="15sp"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginEnd="5dp"/>
-            </TableRow>
-
-            <TableRow
-                android:divider="?android:attr/dividerHorizontal"
-                android:showDividers="middle">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/Rongai_to_kiserian"
-                    android:padding="8dp"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/_50"
-                    android:padding="8dp"/>
-
-                <androidx.appcompat.widget.AppCompatButton
-                    android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:background="@drawable/maroongradientbackground"
-                    android:text="@string/DELETE"
-                    android:textColor="#FFFFFF"
-                    android:textSize="15sp"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginEnd="5dp"/>
-            </TableRow>
-
-            <TableRow
-                android:divider="?android:attr/dividerHorizontal"
-                android:showDividers="middle">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/DELETE"
-                    android:padding="8dp"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/_50"
-                    android:padding="8dp"/>
-
-                <androidx.appcompat.widget.AppCompatButton
-                    android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:background="@drawable/maroongradientbackground"
-                    android:text="DELETE"
-                    android:textColor="#FFFFFF"
-                    android:textSize="15sp"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginEnd="5dp"/>
-            </TableRow>
 
         </TableLayout>
 

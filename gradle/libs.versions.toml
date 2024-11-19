@@ -16,6 +16,7 @@ firebaseAuth = "23.1.0"
 activity = "1.9.3"
 firebaseStorage = "21.0.1"
 firebaseDatabase = "21.0.0"
+firebaseFirestore = "25.1.1"
 
 [libraries]
 picasso = "com.squareup.picasso:picasso:2.71828"
@@ -34,6 +35,7 @@ firebase-auth = { group = "com.google.firebase", name = "firebase-auth", version
 activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 firebase-storage = { group = "com.google.firebase", name = "firebase-storage", version.ref = "firebaseStorage" }
 firebase-database = { group = "com.google.firebase", name = "firebase-database", version.ref = "firebaseDatabase" }
+firebase-firestore = { group = "com.google.firebase", name = "firebase-firestore", version.ref = "firebaseFirestore" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
