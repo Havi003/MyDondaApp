@@ -26,7 +26,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-
+android:fontFamily="@font/montserrat_regular"
         android:text="@string/welcome_n_back"
 
         android:textSize="40sp"
@@ -53,6 +53,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/email"
                 android:hint = "@string/email"
+                android:fontFamily="@font/montserrat_regular"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"
@@ -68,6 +69,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/password"
                 android:hint="@string/password"
+                android:fontFamily="@font/montserrat_regular"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 
@@ -81,13 +83,13 @@
             android:layout_marginHorizontal="10dp"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="40dp"
-
+android:fontFamily="@font/montserrat_regular"
             android:layout_gravity="center_horizontal"
             android:background="@drawable/maroongradientbackground"
             android:text="@string/login"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:textStyle="" />
+            android:textStyle="bold" />
 
         <ProgressBar
             android:id="@+id/progressBar"
@@ -95,16 +97,6 @@
             android:layout_height="wrap_content"
             android:visibility="gone"/>
 
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/forgot_password"
-            android:textColor="@color/black"
-            android:layout_gravity="center_horizontal"
-
-            android:textSize="25sp"/>
 
     </LinearLayout>
 
@@ -117,6 +109,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_margin="20dp"
         android:text="@string/do_not_have_an_account_sign_up"
+        android:fontFamily="@font/montserrat_regular"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="20sp" />

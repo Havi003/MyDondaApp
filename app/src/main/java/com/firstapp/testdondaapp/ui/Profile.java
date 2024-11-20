@@ -65,6 +65,7 @@ public class Profile extends Fragment {
         btnUploadPhoto = view.findViewById(R.id.btn_upload_photo);
         btnSave = view.findViewById(R.id.btn_save);
 
+
         // Set up the user data if available
         if (currentUser != null) {
             editEmail.setText(currentUser.getEmail());
@@ -152,4 +153,8 @@ public class Profile extends Fragment {
             }
         }
     }
+
+    //adding the profile information to Profile info linear layout
+
+
 }

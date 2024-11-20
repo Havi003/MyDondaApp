@@ -5,13 +5,17 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 
+import com.firstapp.testdondaapp.R;
+import com.firstapp.testdondaapp.TransactionHistory;
 import com.firstapp.testdondaapp.databinding.FragmentHomeBinding;
 import com.firstapp.testdondaapp.ui.FareCollection;
 
@@ -35,8 +39,25 @@ public class HomeFragment extends Fragment {
         binding.btnCollect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), FareCollection.class);
-                startActivity(intent);
+                // Use NavController to navigate to the FareCollection fragment
+                NavController navController = Navigation.findNavController(view);
+
+                // Navigate to the FareCollection fragment in the nav_graph
+                navController.navigate(R.id.nav_farecollection);
+            }
+        });
+
+
+        // Set up the LinearLayout to navigate to the Transaction History fragment
+        LinearLayout transactionHistoryLayout = binding.getRoot().findViewById(R.id.transaction_history);
+        transactionHistoryLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Use NavController to navigate to the TransactionHistory fragment
+                NavController navController = Navigation.findNavController(view);
+
+                // Navigate to the Transaction History fragment in the nav_graph
+                navController.navigate(R.id.nav_transactionhistory);
             }
         });
 

@@ -5,29 +5,26 @@
     android:id="@+id/mobile_navigation"
     app:startDestination="@+id/nav_home">
 
+    <!-- Home Fragment -->
     <fragment
         android:id="@+id/nav_home"
         android:name="com.firstapp.testdondaapp.ui.home.HomeFragment"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home">
+        <!-- Action to navigate to FareCollectionFragment -->
+        <action
+            android:id="@+id/action_homeFragment_to_fareCollectionFragment"
+            app:destination="@id/nav_farecollection" />
+    </fragment>
 
-    <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.firstapp.testdondaapp.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
-
-    <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.firstapp.testdondaapp.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
-
+    <!-- FareCollection Fragment -->
     <fragment
         android:id="@+id/nav_farecollection"
         android:name="com.firstapp.testdondaapp.ui.FareCollection"
         android:label="Fare Collection"
         tools:layout="@layout/fragment_fare_collection" />
+
+    <!-- Other Fragments -->
     <fragment
         android:id="@+id/nav_faresettings"
         android:name="com.firstapp.testdondaapp.ui.FareSettings"
@@ -37,25 +34,15 @@
     <fragment
         android:id="@+id/nav_profile"
         android:name="com.firstapp.testdondaapp.ui.Profile"
-        android:label="Fare Settings"
+        android:label="Profile"
         tools:layout="@layout/fragment_profile" />
 
-    <fragment
-        android:id="@+id/nav_workinghours"
-        android:name="com.firstapp.testdondaapp.ui.ui.workingHours"
-        android:label="Working Hours"
-        tools:layout="@layout/fragment_working_hours" />
+
 
     <fragment
         android:id="@+id/nav_transactionhistory"
         android:name="com.firstapp.testdondaapp.TransactionHistory"
         android:label="Transaction history"
         tools:layout="@layout/fragment_transaction_history" />
-
-
-
-
-
-
 
 </navigation>

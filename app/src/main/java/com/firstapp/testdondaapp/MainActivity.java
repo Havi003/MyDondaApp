@@ -62,13 +62,10 @@ public class MainActivity extends AppCompatActivity {
 
         mAppBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.nav_home,
-                R.id.nav_gallery,
-                R.id.nav_slideshow,
                 R.id.nav_farecollection ,
                 R.id.nav_faresettings ,
                 R.id.nav_profile  ,
-                R.id.nav_transactionhistory  ,
-                R.id.nav_workinghours)
+                R.id.nav_transactionhistory)
                 .setOpenableLayout(drawer)
                 .build();
 
